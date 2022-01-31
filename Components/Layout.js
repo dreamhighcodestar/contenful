@@ -1,16 +1,12 @@
-import Link from "next/link";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="layout">
-      {/* Navbar */}
+    <div>
       <Navbar />
-
-      <div className="page-content">{children}</div>
-
-      {/* Footer */}
-      <footer></footer>
+      <div>{children}</div>
+      <Footer />
     </div>
   );
 }
