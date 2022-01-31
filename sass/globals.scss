@@ -1,2 +1,35 @@
+//import functions first so they can be used
+@import "../node_modules/bootstrap/scss/functions";
+//adding colors
+//add blues for color palette
+@import "../node_modules/bootstrap/scss/variables";
+@each $color, $val in $blues {
+  .bg-#{$color} {
+    background-color: $val;
+  }
+  .text-#{$color} {
+    color: $val;
+  }
+}
+
+//add theme color
+$custom-colors: (
+  "lime": #80ff43,
+  "orange": #d34600,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+//code below require because of changes to bootstrap 5
+//"A recent change to the way the text- and bg- classes are created requires additional SASS map merges in 5.1.0"
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop(
+  $utilities-colors,
+  rgba-css-var,
+  "$key",
+  "text"
+);
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
 // //importing main bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
