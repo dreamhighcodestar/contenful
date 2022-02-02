@@ -5,6 +5,7 @@ import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("../node_modules/bootstrap/dist/js/bootstrap.min.js");
+    import("../node_modules/@fortawesome/fontawesome-free/css/all.css");
   }, []);
   return (
     <Layout>
