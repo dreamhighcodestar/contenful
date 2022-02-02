@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,21 +10,21 @@ const Footer = () => {
         </div>
         <div className="container">
           <div className="d-flex flex-column flex-md-row justify-content-center text-center py-4">
-            <a href="" className="text-orange px-3">
-              Products
-            </a>
-            <a href="" className="text-orange px-3">
-              Divisions
-            </a>
-            <a href="" className="text-orange px-3">
-              Events
-            </a>
-            <a href="" className="text-orange px-3">
-              Contact
-            </a>
-            <a href="" className="text-orange px-3">
-              Careers
-            </a>
+            <Link href="/products">
+              <a className="text-orange px-3">Products</a>
+            </Link>
+            <Link href="/divisions">
+              <a className="text-orange px-3">Divisions</a>
+            </Link>
+            <Link href="/events">
+              <a className="text-orange px-3">Events</a>
+            </Link>
+            <Link href="/contact">
+              <a className="text-orange px-3">Contact</a>
+            </Link>
+            <Link href="/careers">
+              <a className="text-orange px-3">Careers</a>
+            </Link>
           </div>
         </div>
       </div>
