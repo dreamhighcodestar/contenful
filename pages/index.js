@@ -22,7 +22,7 @@ export default function Home() {
             </div>
             <div className="d-flex justify-content-center my-2">
               {" "}
-              <Link href="/products">
+              <Link href="/products" passHref>
                 <button className="btn btn-lime text-blue-800 fw-bold">
                   view products
                 </button>
