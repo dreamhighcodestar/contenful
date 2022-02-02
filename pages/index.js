@@ -4,6 +4,7 @@ import Image from "next/image";
 import Divisions from "../Components/Divisions";
 import Stats from "../Components/Stats";
 import ClientStats from "../Components/ClientStats";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,9 +22,11 @@ export default function Home() {
             </div>
             <div className="d-flex justify-content-center my-2">
               {" "}
-              <button className="btn btn-lime text-blue-800 fw-bold">
-                view products
-              </button>
+              <Link href="/products">
+                <button className="btn btn-lime text-blue-800 fw-bold">
+                  view products
+                </button>
+              </Link>
             </div>
           </div>
         </div>{" "}
@@ -31,7 +34,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="pt-5 bg-blue-100">
-        <h2 className="text-center mt-5">About</h2>
+        <h2 className="text-center mt-5 text-blue-800">About</h2>
         <div className="container">
           <div className="row justify-content-center py-5">
             <div className="d-flex flex-column justify-content-center col-sm-10 col-lg-6">
@@ -58,6 +61,7 @@ export default function Home() {
         </div>
         <Stats />
         <ClientStats />
+        <Divisions />
       </section>
     </>
   );
