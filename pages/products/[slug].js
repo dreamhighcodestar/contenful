@@ -28,7 +28,14 @@ export async function getStaticProps({ params }) {
     content_type: "product",
     "fields.slug": params.slug,
   });
-
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/products",
+        permenant: false,
+      },
+    };
+  }
   return {
     props: {
       product: items[0],
