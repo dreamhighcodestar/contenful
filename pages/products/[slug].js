@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Skeleton from "./Skeleton";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -18,7 +19,7 @@ export const getStaticPaths = async () => {
   });
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -32,10 +33,13 @@ export async function getStaticProps({ params }) {
     props: {
       product: items[0],
     },
+    revalidate: 1,
   };
 }
 
 const ProductDetails = ({ product }) => {
+  if (!product) return <Skeleton />;
+
   const { productTitle, productImages, productDescription } = product.fields;
   return (
     <div className="mt-5 m-1">
