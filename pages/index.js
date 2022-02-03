@@ -4,8 +4,22 @@ import Image from "next/image";
 import Stats from "../Components/Stats";
 import ClientStats from "../Components/ClientStats";
 import Link from "next/link";
+import { gsap } from "gsap";
+import React, { useEffect } from "react";
 
 export default function Home() {
+  const header = React.createRef();
+  const button = React.createRef();
+  useEffect(() => {
+    gsap.from(header.current, { duration: 2, x: 300 });
+    gsap.from(button.current, {
+      duration: 2,
+      y: 300,
+      rotation: 90,
+      ease: "bounce",
+    });
+  }, []);
+
   return (
     <>
       <HeadComponent />
@@ -16,13 +30,19 @@ export default function Home() {
             <div className="d-flex justify-content-center fs-2 mb-2 text-center">
               Our mission is to assist our customers in making Africa
             </div>
-            <div className="d-flex justify-content-center text-blue-800 display-3 fw-bold text-center">
+            <div
+              ref={header}
+              className="d-flex justify-content-center text-blue-800 display-3 fw-bold text-center logo"
+            >
               <p>Cleaner, Safer and Healthier</p>
             </div>
             <div className="d-flex justify-content-center my-2">
               {" "}
               <Link href="/products" passHref>
-                <button className="btn btn-lime text-blue-800 fw-bold">
+                <button
+                  ref={button}
+                  className="btn btn-lime text-blue-800 fw-bold"
+                >
                   view products
                 </button>
               </Link>
