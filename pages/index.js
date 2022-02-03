@@ -1,7 +1,6 @@
 import HeadComponent from "../Components/Head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import Divisions from "../Components/Divisions";
 import Stats from "../Components/Stats";
 import ClientStats from "../Components/ClientStats";
 import Link from "next/link";
@@ -61,7 +60,6 @@ export default function Home() {
         </div>
         <Stats />
         <ClientStats />
-        <Divisions />
       </section>
     </>
   );

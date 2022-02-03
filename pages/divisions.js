@@ -1,5 +1,13 @@
-const Divisions = () => {
-  return <div className="mt-5 pt-5">Divisions PAge</div>;
+import Divisions from "../Components/Divisions";
+
+const divisions = () => {
+  return (
+    <div className="pt-5 mt-5">
+      <div className="d-flex flex-wrap justify-content-center mt-5">
+        <Divisions />
+      </div>
+    </div>
+  );
 };
 
-export default Divisions;
+export default divisions;
