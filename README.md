@@ -1,4 +1,6 @@
-## FNSscientific
+## FNSscientific - Company Website Project
+
+## For current progress see -  https://fnsscientific.vercel.app/
 
 ### User Requirements Specification
 
