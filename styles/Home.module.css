@@ -11,6 +11,7 @@
   z-index: -1;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
