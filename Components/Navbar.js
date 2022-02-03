@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className="btn-group dropstart">
             <button
               type="button"
-              class="btn btn-blue-800 dropdown-toggle text-lime"
+              className="btn btn-blue-800 dropdown-toggle text-lime"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
