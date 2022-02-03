@@ -14,50 +14,54 @@ const Navbar = () => {
           </Link>
         </div>
         {/* Drop down Button for small screens */}
-        <div id={styles.dropDown} className="">
-          <div class="btn-group dropstart">
+        <div id={styles.dropDown}>
+          <div className="btn-group dropstart">
             <button
               type="button"
               class="btn btn-blue-800 dropdown-toggle text-lime"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fas fa-align-left fs-1"></i>
+              <i className="fas fa-align-left fs-1"></i>
             </button>
-            <ul class="dropdown-menu p-0">
+            <ul className="dropdown-menu p-0">
               <li className="bg-blue-200 ">
                 <Link href="/">
-                  <a class="dropdown-item fw-bold text-blue-800">Home</a>
+                  <a className="dropdown-item fw-bold text-blue-800">Home</a>
                 </Link>
               </li>
               <li className="bg-blue-200">
                 <Link href="/#about">
-                  <a class="dropdown-item fw-bold text-blue-800">About</a>
+                  <a className="dropdown-item fw-bold text-blue-800">About</a>
                 </Link>
               </li>
               <li className="bg-blue-200">
                 <Link href="/products">
-                  <a class="dropdown-item fw-bold text-blue-800">Products</a>
+                  <a className="dropdown-item fw-bold text-blue-800">
+                    Products
+                  </a>
                 </Link>
               </li>
               <li className="bg-blue-200">
                 <Link href="/divisions">
-                  <a class="dropdown-item fw-bold text-blue-800">Divisions</a>
+                  <a className="dropdown-item fw-bold text-blue-800">
+                    Divisions
+                  </a>
                 </Link>
               </li>
               <li className="bg-blue-200">
                 <Link href="/events">
-                  <a class="dropdown-item fw-bold text-blue-800">Events</a>
+                  <a className="dropdown-item fw-bold text-blue-800">Events</a>
                 </Link>
               </li>
               <li className="bg-blue-200">
                 <Link href="/contact">
-                  <a class="dropdown-item fw-bold text-blue-800">Contact</a>
+                  <a className="dropdown-item fw-bold text-blue-800">Contact</a>
                 </Link>
               </li>
               <li className="bg-blue-200">
                 <Link href="/careers">
-                  <a class="dropdown-item fw-bold text-blue-800">Careers</a>
+                  <a className="dropdown-item fw-bold text-blue-800">Careers</a>
                 </Link>
               </li>
             </ul>
