@@ -14,10 +14,10 @@ export default function Home() {
   const button = React.createRef();
 
   useEffect(() => {
-    gsap.from(header.current, { duration: 2, x: 300, ease: "back" });
-    gsap.from(header2.current, { duration: 2, x: -300, ease: "back" });
+    gsap.from(header.current, { duration: 1, x: 300, ease: "back" });
+    gsap.from(header2.current, { duration: 1, x: -300, ease: "back" });
     gsap.from(button.current, {
-      duration: 2,
+      duration: 1,
       y: 300,
       rotation: 90,
       ease: "back",

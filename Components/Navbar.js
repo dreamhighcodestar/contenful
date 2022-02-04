@@ -8,6 +8,7 @@ const Navbar = () => {
   const navbar = createRef();
   const logo = createRef();
   const links = createRef();
+  const button = createRef();
   const link = gsap.utils.selector(links);
   useEffect(() => {
     gsap.from(navbar.current, {
@@ -21,6 +22,7 @@ const Navbar = () => {
       { opacity: 1, duration: 3, stagger: 0.5 }
     );
     gsap.fromTo(logo.current, { opacity: 0 }, { opacity: 1, duration: 3 });
+    gsap.fromTo(button.current, { opacity: 0 }, { opacity: 1, duration: 3 });
   }, []);
 
   return (
@@ -44,7 +46,7 @@ const Navbar = () => {
               className="btn btn-blue-800 dropdown-toggle text-lime"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              ref={logo}
+              ref={button}
             >
               <i className="fas fa-align-left fs-1"></i>
             </button>
