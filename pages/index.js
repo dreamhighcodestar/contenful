@@ -53,10 +53,10 @@ export default function Home() {
         <div className="container">
           <div className="missionStatement mt-5">
             <div
-              className="d-flex justify-content-center fs-2 mb-2 text-center fw-bold text-blue-900"
+              className="fs-2 mb-2 text-center fw-bold text-blue-900"
               ref={header2}
             >
-              Our <span className="text-orange px-1 fw-bolder"> mission </span>{" "}
+              Our <span className="text-orange px-1 fw-bolder"> mission </span>
               is to assist our customers in making Africa
             </div>
             <div
