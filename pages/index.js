@@ -4,21 +4,46 @@ import Image from "next/image";
 import Stats from "../Components/Stats";
 import ClientStats from "../Components/ClientStats";
 import Link from "next/link";
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap.js";
 import React, { useEffect } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Home() {
   const header = React.createRef();
+  const header2 = React.createRef();
   const button = React.createRef();
+
   useEffect(() => {
-    gsap.from(header.current, { duration: 2, x: 300 });
+    gsap.from(header.current, { duration: 2, x: 300, ease: "back" });
+    gsap.from(header2.current, { duration: 2, x: -300, ease: "back" });
     gsap.from(button.current, {
       duration: 2,
       y: 300,
       rotation: 90,
-      ease: "bounce",
+      ease: "back",
+    });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from("#about-title", {
+      scrollTrigger: {
+        trigger: "#about-title",
+        toggleActions: "play none none none",
+      },
+      y: 75,
+      duration: 1.5,
     });
   }, []);
+
+  const onEnter = ({ currentTarget }) => {
+    gsap.to(currentTarget, {
+      backgroundColor: "#d34600",
+      duration: 0.2,
+      expand: 1.1,
+    });
+  };
+
+  const onLeave = ({ currentTarget }) => {
+    gsap.to(currentTarget, { backgroundColor: "#80ff43", duration: 0.2 });
+  };
 
   return (
     <>
@@ -27,8 +52,12 @@ export default function Home() {
       <div className={styles.landing}>
         <div className="container">
           <div className="missionStatement mt-5">
-            <div className="d-flex justify-content-center fs-2 mb-2 text-center">
-              Our mission is to assist our customers in making Africa
+            <div
+              className="d-flex justify-content-center fs-2 mb-2 text-center fw-bold text-blue-900"
+              ref={header2}
+            >
+              Our <span className="text-orange px-1 fw-bolder"> mission </span>{" "}
+              is to assist our customers in making Africa
             </div>
             <div
               ref={header}
@@ -42,6 +71,8 @@ export default function Home() {
                 <button
                   ref={button}
                   className="btn btn-lime text-blue-800 fw-bold"
+                  onMouseEnter={onEnter}
+                  onMouseLeave={onLeave}
                 >
                   view products
                 </button>
@@ -52,8 +83,10 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <section id="about" className="pt-5 bg-blue-100">
-        <h2 className="text-center mt-5 text-blue-800">About</h2>
+      <section id="about" className="pt-3 bg-blue-100">
+        <h2 id="about-title" className="text-center mt-5 pt-5 text-blue-800">
+          About
+        </h2>
         <div className="container">
           <div className="row justify-content-center py-5">
             <div className="d-flex flex-column justify-content-center col-sm-10 col-lg-6">
