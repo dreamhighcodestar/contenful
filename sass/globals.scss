@@ -31,5 +31,7 @@ $utilities-text-colors: map-loop(
 );
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
+$body-bg: $blue-100;
+
 // //importing main bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
