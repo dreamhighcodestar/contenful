@@ -2,6 +2,9 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Skeleton from "./Skeleton";
+import { fadeUp } from "../../animations/fadeUp";
+import { useEffect } from "react";
+import Link from "next/link";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -47,13 +50,16 @@ export async function getStaticProps({ params }) {
 const ProductDetails = ({ product }) => {
   if (!product) return <Skeleton />;
 
+  useEffect(() => {
+    fadeUp("#text");
+  });
+
   const { productTitle, productImages, productDescription } = product.fields;
   return (
     <div className="mt-5 m-1">
       <div className="m-5 pt-5">
         <h2 className="text-center mt-5 text-blue-800">{productTitle}</h2>
-      </div>
-
+      </div>{" "}
       <div className="m-0 m-lg-5 p-0 row justify-content-center">
         <div className="col-10 col-md-6 p-0 p-md-3">
           {" "}
@@ -63,9 +69,16 @@ const ProductDetails = ({ product }) => {
             height={productImages[0].fields.file.details.image.height}
           />
         </div>
-        <div className="col-10 col-md-6 p-0 p-md-3">
+        <div id="text" className="col-10 col-md-6 p-0 p-md-3">
           {documentToReactComponents(productDescription)}
         </div>
+      </div>
+      <div className="d-flex justify-content-end me-5 my-5">
+        <Link href="/products">
+          <button className="btn btn-orange fw-bold">
+            <i className="fas fa-undo"></i> Back to Products
+          </button>
+        </Link>
       </div>
     </div>
   );

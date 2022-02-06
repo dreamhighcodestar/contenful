@@ -1,8 +1,14 @@
 import Stat from "./Stat";
+import { useEffect } from "react";
+import { fadeUp } from "../animations/fadeUp";
 
 const Stats = () => {
+  useEffect(() => {
+    fadeUp("#about-stats");
+  }, []);
+
   return (
-    <div className="row justify-content-center mx-3">
+    <div id="about-stats" className="row justify-content-center mx-3">
       <Stat
         title="22 brands"
         icon="fas fa-tags"

@@ -1,5 +1,7 @@
 import Product from "../../Components/Product";
 import { createClient } from "contentful";
+import { fadeUp } from "../../animations/fadeUp";
+import { useEffect } from "react";
 
 export async function getServerSideProps() {
   const client = createClient({
@@ -19,9 +21,16 @@ export async function getServerSideProps() {
 }
 
 const products = ({ products }) => {
+  useEffect(() => {
+    fadeUp("#page-title");
+    fadeUp("#product-card");
+  }, []);
+
   return (
-    <div className="pt-5 mt-5">
-      <h2 className="text-center mt-5 text-blue-800">Products</h2>
+    <div className="pt-5 my-5">
+      <h2 id="page-title" className="text-center mt-5 text-blue-800">
+        Products
+      </h2>
       <div className="d-flex flex-wrap justify-content-center">
         {products.map((product) => {
           return <Product key={product.sys.id} product={product.fields} />;
