@@ -48,11 +48,11 @@ export async function getStaticProps({ params }) {
 }
 
 const ProductDetails = ({ product }) => {
-  if (!product) return <Skeleton />;
-
   useEffect(() => {
     fadeUp("#text");
   });
+
+  if (!product) return <Skeleton />;
 
   const { productTitle, productImages, productDescription } = product.fields;
   return (

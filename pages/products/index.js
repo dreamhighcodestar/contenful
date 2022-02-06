@@ -20,7 +20,7 @@ export async function getServerSideProps() {
   };
 }
 
-const products = ({ products }) => {
+const Products = ({ products }) => {
   useEffect(() => {
     fadeUp("#page-title");
     fadeUp("#product-card");
@@ -40,4 +40,4 @@ const products = ({ products }) => {
   );
 };
 
-export default products;
+export default Products;
