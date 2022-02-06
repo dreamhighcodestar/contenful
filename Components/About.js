@@ -15,7 +15,7 @@ const About = () => {
         <div className="row justify-content-center pb-5">
           <div className="d-flex flex-column justify-content-center col-sm-10 col-lg-6">
             <Image
-              className="p-0 p-sm-1 p-md-2"
+              className="p-0 p-sm-1 p-md-2 m-1"
               src="/assets/staff.jpg"
               width={1300}
               height={950}
