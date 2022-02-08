@@ -1,20 +1,27 @@
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
+import { fadeUp } from "../animations/fadeUp";
 
 const Contact = () => {
   const MapWithNoSSR = dynamic(() => import("../Components/Map.js"), {
     ssr: false,
   });
+
+  useEffect(() => {
+    fadeUp("#contact-title");
+    fadeUp("#contact-form");
+  });
   return (
     <>
       <div className="mt-3 py-5">
-        <h2 id="coming-soon" className="text-center mt-5 pt-5 text-blue-800">
+        <h2 id="contact-title" className="text-center mt-5 pt-5 text-blue-800">
           Contact Us
         </h2>
       </div>
       <div className="container mb-5">
         <div className="row justify-content-center">
-          <div className="col-md-6">
+          <div id="contact-form" className="col-md-6">
             <div className="container">
               <table className="table">
                 <tbody>
