@@ -35,10 +35,10 @@ const Careers = ({ jobPosts }) => {
       </div>
       <div id="career-text" className="container mb-5 text-blue-800">
         <h3 className="mt-5">
-          Welcome to the Careers page for F{"&amp;"}S Scientific Ltd
+          Welcome to the Careers page for F&amp;S Scientific Ltd
         </h3>
         <p>
-          F{"&amp;"}S Scientific is a leading provider of laboratory and field
+          F&amp;S Scientific is a leading provider of laboratory and field
           testing solutions in East Africa. We serve customers in Healthcare,
           Industries, Research and Academia. Our accurate and high-quality
           technology solutions enable our customers to monitor and improve
@@ -53,7 +53,7 @@ const Careers = ({ jobPosts }) => {
           various divisions. It is your chance to be part of a dynamic team and
           make an immediate impact!
         </p>
-        <h4>Benefits of working at F{"&amp;"}S Scientific:</h4>
+        <h4>Benefits of working at F&amp;S Scientific:</h4>
         <ul>
           <li>
             A stable and growing company that is passionate about delivering
