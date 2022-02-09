@@ -35,10 +35,10 @@ const Careers = ({ jobPosts }) => {
       </div>
       <div id="career-text" className="container mb-5 text-blue-800">
         <h3 className="mt-5">
-          Welcome to the Careers page for F&#38;S Scientific Ltd
+          Welcome to the Careers page for F{"&amp;"}S Scientific Ltd
         </h3>
         <p>
-          F&#38;S Scientific is a leading provider of laboratory and field
+          F{"&amp;"}S Scientific is a leading provider of laboratory and field
           testing solutions in East Africa. We serve customers in Healthcare,
           Industries, Research and Academia. Our accurate and high-quality
           technology solutions enable our customers to monitor and improve
