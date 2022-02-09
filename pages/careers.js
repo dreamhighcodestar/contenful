@@ -50,10 +50,10 @@ const Careers = ({ jobPosts }) => {
         </p>
         <p>
           We are looking for ambitious and enthusiastic individuals to join our
-          various divisions. It's your chance to be part of a dynamic team and
+          various divisions. It is your chance to be part of a dynamic team and
           make an immediate impact!
         </p>
-        <h4>Benefits of working at F&amp;S Scientific:</h4>
+        <h4>Benefits of working at F{"&amp;"}S Scientific:</h4>
         <ul>
           <li>
             A stable and growing company that is passionate about delivering
