@@ -14,14 +14,14 @@ const JobPost = ({ job }) => {
             <a
               download
               target="_blank"
-              class="text-blue-800 text-decoration-none"
+              className="text-blue-800 text-decoration-none"
             >
               <button className="btn btn-orange fw-bold"> Job Profile</button>
             </a>
           </Link>
 
           <a
-            class="text-blue-800 text-decoration-none"
+            className="text-blue-800 text-decoration-none"
             href={job.applicationLink}
             target="_blank"
           >

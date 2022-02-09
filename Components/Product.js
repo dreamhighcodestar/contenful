@@ -19,7 +19,9 @@ const Product = ({ product }) => {
         </Link>
         <div className="card-body">
           <Link href={"/products/" + slug}>
-            <a className="card-title fw-bold text-blue-800">{productTitle}</a>
+            <a className="card-title fw-bold text-blue-800 text-decoration-none">
+              {productTitle}
+            </a>
           </Link>
         </div>
       </div>
