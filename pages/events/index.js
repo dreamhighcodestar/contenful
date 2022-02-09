@@ -17,6 +17,7 @@ export async function getServerSideProps() {
     props: {
       events: res.items,
     },
+    revalidate: 60,
   };
 }
 

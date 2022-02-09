@@ -17,6 +17,7 @@ export async function getServerSideProps() {
     props: {
       jobPosts: res.items,
     },
+    revalidate: 60,
   };
 }
 
@@ -25,7 +26,6 @@ const Careers = ({ jobPosts }) => {
     fadeUp("#career-title");
     fadeUp("#career-text");
   });
-  console.log(jobPosts);
   return (
     <>
       <div className="pt-5 my-5">
