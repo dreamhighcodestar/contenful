@@ -14,12 +14,16 @@ const Product = ({ product }) => {
               width={1300}
               height={900}
               className="card-img-top"
+              alt={productTitle}
             />
           </a>
         </Link>
         <div className="card-body">
           <Link href={"/products/" + slug}>
-            <a className="card-title fw-bold text-blue-800 text-decoration-none">
+            <a
+              className="card-title fw-bold text-blue-800 text-decoration-none"
+              title={productTitle}
+            >
               {productTitle}
             </a>
           </Link>
