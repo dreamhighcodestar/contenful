@@ -3,8 +3,18 @@ import Head from "next/head";
 const HeadComponent = () => {
   return (
     <Head>
-      <title>fnscientific</title>
-      <meta name="description" content="fnscientific" />
+      <title>
+        fnscientific - your labortatory equipment in Kenya and East Africa
+      </title>
+      <meta
+        name="description"
+        content="We supply laboratory equimpent across Kenya and east Africa"
+      />
+      {/* Add to this list base on product offering */}
+      <meta
+        name="keywords"
+        content="laboratory, equipment, kenya, africa, test kits"
+      />
       <link rel="icon" href="/favicon.ico" />
 
       <link
