@@ -3,7 +3,7 @@ import { fadeUp } from "../animations/fadeUp";
 import JobPost from "../Components/JobPost";
 import { createClient } from "contentful";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
