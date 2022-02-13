@@ -57,8 +57,8 @@ const Contact = () => {
             </div>
             <form
               id="contact-form"
-              method="post"
-              action="/"
+              // method="post"
+              // action="/"
               className="php-email-form"
             >
               <div className="row">
