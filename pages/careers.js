@@ -95,7 +95,7 @@ const Careers = ({ jobPosts }) => {
       </div>
 
       <h4 className="container text-blue-800">Current Positions</h4>
-      <div className="container">
+      <div className="container mb-5">
         <div className="d-flex flex-wrap justify-content-center">
           {jobPosts.map((job) => {
             return <JobPost key={job.sys.id} job={job.fields} />;

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const JobPost = ({ job }) => {
   return (
-    <div className="container my-5 p-2 p-sm-4 border-bottom border-orange border-3 text-blue-800">
+    <div className="container my-2 p-2 p-sm-4 border-bottom border-orange border-3 text-blue-800">
       <div className="row">
         <div className="col-sm-9">
           <h5 className="p-0 m-0">{job.jobTitle}</h5>

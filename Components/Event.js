@@ -28,7 +28,7 @@ const Event = ({ event }) => {
     return number < 10 ? "0" + number.toString() : number.toString();
   }
   return (
-    <div className="container my-5">
+    <div className="container my-3">
       <div className="card">
         <div className="card-body">
           <div className="row">
