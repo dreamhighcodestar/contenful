@@ -21,7 +21,7 @@ const About = () => {
               height={950}
             />
           </div>
-          <div className="col-sm-10 col-lg-6 p-xs-1 p-md-3 p-lg-5">
+          <div className="col-sm-10 col-lg-6 p-xs-1 p-md-3 p-lg-5 mt-4">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nihil
             ducimus assumenda, harum in voluptatem cum modi pariatur? Eum
             quibusdam aliquid quodesentium! Quidem, inventore asperiores error
