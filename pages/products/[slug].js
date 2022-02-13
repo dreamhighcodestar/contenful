@@ -69,7 +69,7 @@ const ProductDetails = ({ product }) => {
             height={productImages[0].fields.file.details.image.height}
           />
         </div>
-        <div id="text" className="col-10 col-md-6 p-0 p-md-3">
+        <div id="text" className="col-10 col-md-6 p-0 p-md-3 mt-4 mt-md-0">
           {documentToReactComponents(productDescription)}
         </div>
       </div>
