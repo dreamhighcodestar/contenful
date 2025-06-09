@@ -1,8 +1,6 @@
 ## FNSscientific - Company Website Project
 
-## For current progress see -  https://fnsscientific.vercel.app/
-
-### User Requirements Specification
+## User Requirements Specification
 
 > "I want a simple website that can show case the products that we supply and links to the brands we partner with. It has to be dead simple to update as the products/brands will change overtime."
 
